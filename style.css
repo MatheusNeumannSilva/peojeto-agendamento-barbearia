@@ -1,0 +1,76 @@
+body {
+  background-image: url(./assets/dubarber.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: white;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  font-weight: 900;
+  font-size: 100px;
+  top: 5%;
+}
+
+.lado-direito {
+  border: red solid 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza tudo na mesma linha vertical */
+  gap: 20px;
+  width: 50%; /* ocupa metade direita da tela */
+  margin-left: auto; /* empurra para a direita */
+  padding: 40px 60px 40px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.botao-agendar {
+  background: linear-gradient(135deg, #c8a000, #f5d020, #c8a000);
+  color: #3a2800;
+  font-family: "Scope One", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  padding: 20px 100px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 20px rgba(200, 160, 0, 0.4);
+  width: 100%; /* mesma largura do h1 */
+  max-width: 450px; /* limita para não ficar gigante */
+}
+
+.container-map {
+  width: 100%;
+  max-width: 450px; /* mesmo max-width do botão = alinhados */
+}
+
+.container-map iframe {
+  width: 100%;
+  height: 350px;
+  border: 5px solid #ddd;
+  border-radius: 15px;
+  display: block;
+}
+
+#social-links {
+  padding-top: 100;
+  color: #ddd;
+  gap: 4px;
+  font-size: 24px;
+  margin-right: 244px;
+  display: flex;
+}
+
+#social-links a {
+  color: #ddd;
+  font-family: "Scope One", sans-serif;
+  text-decoration: none;
+}
