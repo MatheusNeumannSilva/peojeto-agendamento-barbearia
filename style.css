@@ -2,26 +2,48 @@ body {
   background-image: url(./assets/dubarber.png);
   background-repeat: no-repeat;
   background-size: cover;
+  margin: 0;
 }
 
 h1 {
   color: white;
-  font-family: "Rubik", sans-serif;
+  font-family: "New Rocker", system-ui;
   text-align: center;
   font-weight: 900;
-  font-size: 100px;
+  font-size: 130px;
   top: 5%;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 div {
+  color: #c8a000;
+}
+
+ul {
+  color: #c8a000;
+  font-size: 40px;
+  margin-top: 28px;
+  font-family: "Rubik", sans-serif;
+}
+
+li p {
+  color: white;
 }
 
 .lado-direito {
-  border: red solid 1px;
   display: flex;
   flex-direction: column;
   align-items: center; /* centraliza tudo na mesma linha vertical */
   gap: 20px;
   width: 50%; /* ocupa metade direita da tela */
   margin-left: auto; /* empurra para a direita */
-  padding: 40px 60px 40px 0;
+  padding: 0px 0px 20px 0;
+  margin-top: -70px;
+  transform: scale(0.93);
 }
 
 .container {
@@ -63,14 +85,20 @@ h1 {
 #social-links {
   padding-top: 100;
   color: #ddd;
-  gap: 4px;
+  gap: 6px;
   font-size: 24px;
   margin-right: 244px;
   display: flex;
+  align-items: center;
+  line-height: 1;
 }
 
 #social-links a {
   color: #ddd;
   font-family: "Scope One", sans-serif;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 900;
 }
