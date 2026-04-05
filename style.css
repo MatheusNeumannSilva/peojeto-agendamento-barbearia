@@ -4,8 +4,64 @@
   box-sizing: border-box;
 }
 
+/* Animação de fade + subida */
+@keyframes surgir {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Elementos que surgem ao carregar */
+h1 {
+  animation: surgir 0.5s ease forwards;
+}
+.subtitle {
+  animation: surgir 0.5s ease 0.2s forwards;
+  opacity: 0;
+}
+ul {
+  animation: surgir 0.5s ease 0.4s forwards;
+  opacity: 0;
+}
+.contact {
+  animation: surgir 0.5s ease 0.6s forwards;
+  opacity: 0;
+}
+.wpp {
+  animation: surgir 0.5s ease 0.8s forwards;
+  opacity: 0;
+}
+.botao-agendar {
+  animation: surgir 0.5s ease 1s forwards;
+  opacity: 0;
+}
+.container-map {
+  animation: surgir 0.5s ease 1.2s forwards;
+  opacity: 0;
+}
+
+/* Classe para elementos invisíveis esperando o scroll */
+.escondido {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+/* Classe adicionada pelo JS quando o elemento fica visível */
+.visivel {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 body {
-  background-image: url(./assets/dubarber.png);
+  background-image: url(./assets/edubarberback.png);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,8 +73,7 @@ h1 {
   text-align: center;
   font-weight: 900;
   font-size: 130px;
-  top: 5%;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,20 +85,19 @@ h1 div {
 }
 
 .subtitle {
-  font-family: "Rubik", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 400;
   color: white;
-  margin-top: 5px;
+  margin: 0 0 15px 0;
 }
 
 ul {
   color: #c8a000;
   font-size: 30px;
-  margin-top: 10px;
-  font-family: "Rubik", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin: 10px 0 20px 0;
 }
 
 li p {
@@ -53,22 +107,23 @@ li p {
 }
 
 .contact {
-  font-family: "Rubik", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   color: white;
   font-size: 22px;
   margin-top: 5px;
   text-decoration: underline;
+  margin: 0 0 15px 0;
 }
 
 .wpp {
   font-size: 30px;
-  margin-top: 5px;
   color: #ddd;
-  margin-left: -40px;
   display: flex;
   align-items: center;
   gap: 6px;
+  margin: 5px 0 0 -40px;
+  font-family: "Open Sans", sans-serif;
 }
 
 .wpp a {
@@ -80,11 +135,11 @@ li p {
   display: flex;
   flex-direction: column;
   align-items: center; /* centraliza tudo na mesma linha vertical */
-  gap: 10px;
+  gap: 25px;
   width: 50%; /* ocupa metade direita da tela */
   margin-left: auto; /* empurra para a direita */
   padding: 50px 0px 20px 0;
-  margin-top: -50px;
+  margin-top: -90px;
   transform: scale(0.8);
   padding-bottom: 0;
 }
@@ -97,7 +152,7 @@ li p {
 }
 
 .botao-agendar {
-  background: linear-gradient(135deg, #c8a000, #f5d020, #c8a000);
+  background: linear-gradient(135deg, #b8a24a, #f3d439, #9b7d05);
   color: #3a2800;
   font-family: "Scope One", sans-serif;
   font-size: 22px;
@@ -111,6 +166,13 @@ li p {
   width: 100%; /* mesma largura do h1 */
   max-width: 450px; /* limita para não ficar gigante */
   margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.botao-agendar:hover {
+  box-shadow: 0 0 20px rgba(200, 160, 0, 0.7);
 }
 
 .container-map {
@@ -149,7 +211,7 @@ li p {
 
 .newsection {
   width: 100%;
-  background-image: url(./assets/abstract-luxury-blur-dark-grey-black-gradient-used-as-background-studio-wall-display-your-products.jpg); /* cor de fundo */
+  background-image: url(./assets/CD7B5EA9-0B4C-4B28-A7FF-BEDD83E2EB4E\ \(1\).png); /* cor de fundo */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,6 +225,25 @@ li p {
   font-weight: 900;
   font-size: 130px;
   margin: 100px;
+}
+
+.subtitle-2 {
+  color: #ddd;
+  font-size: 20px;
+  text-align: center;
+  position: relative;
+  top: -50px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+}
+
+.team {
+  font-size: 60px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  position: relative;
+  top: 50px;
+  margin: 0 0 50px 0;
 }
 
 h2 span {
@@ -199,7 +280,7 @@ h2 span {
   font-size: 24px;
   font-family: "Scope One", sans-serif;
   font-weight: 500;
-  color: white;
+  color: #ddd;
   text-align: left;
   padding-left: 21px;
 }
@@ -221,7 +302,7 @@ h2 span {
   font-size: 24px;
   font-family: "Scope One", sans-serif;
   font-weight: 500;
-  color: white;
+  color: #ddd;
   text-align: left;
   padding-left: 21px;
 }
