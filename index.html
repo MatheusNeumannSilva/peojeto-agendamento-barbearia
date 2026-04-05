@@ -1,6 +1,12 @@
 <!doctype html>
 <html lang="pt-br">
   <head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=New+Rocker&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Scope+One&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -44,12 +50,12 @@
           
         </ul>
         <div class="contact">
-        <p> horário personalizado contate-nos:</p>
+        <p> Horários personalizados contate-nos:</p>
         </div>
 
         <div class="wpp">
           <ion-icon name="logo-whatsapp"></ion-icon>
-          <a href="" target="_blank">+554197926477</a>
+          <a href="https://wa.me/554197926477" target="_blank">+554197926477</a>
         </div>
 
 
@@ -91,23 +97,30 @@
 
 
 
-     <section class="newsection">
-    <h2>SOBRE <span>NÓS</span></h2>
-    <p>contudo aqui</p>
+  <section class="newsection">
+    <div class="title escondido">
+     <h2>SOBRE <span>NÓS</span></h2>
+    </div>
+    <div class="subtitle-2 escondido">
+     <p>Somos uma barbearia que preza pela qualidade de atendimento, com um otimo ambiente acolhedor e <br> que sempre manterá o respeito por qualquer cliente, a 8 anos a barberia segue em peso sendo a melhor da regiao<p>
+     <div class="team escondido">
+      <p>EQUIPE</p>
+     </div>
+    </div>
 
    <div class="barber-pic">
-     <div class="card">
+     <div class="card escondido">
        <img src="./assets/barber-pic.jpeg" alt="">
        <p>Eduardo Amaral</p>
        <div class="exp">
-        <p>10 anos de experiencia</p>
+        <p>6 anos de experiência</p>
         </div>
      </div>
-     <div class="card-2">
+     <div class="card-2 escondido">
        <img src="./assets/barber-pic.jpeg" alt="">
        <p>Thyago Machado
         <div class="exp-2">
-        <p>8 anos de experiencia</p>
+        <p>6 anos de experiência</p>
         </div>
        </p>
      </div>
@@ -119,5 +132,22 @@
 
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visivel');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.escondido').forEach(el => {
+    observer.observe(el);
+  });
+</script>
   </body>
 </html>
