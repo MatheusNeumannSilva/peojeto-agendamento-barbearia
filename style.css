@@ -168,6 +168,11 @@ li p {
   transition: box-shadow 0.3s ease;
 }
 
+.botao-agendar a {
+  color: #0d0d0d;
+  text-decoration: none;
+}
+
 .botao-agendar:hover {
   box-shadow: 0 0 20px rgba(200, 160, 0, 0.7);
 }
@@ -365,4 +370,8 @@ h2 span {
   object-fit: cover; /* recorta sem distorcer */
   display: block;
   margin-top: 3rem;
+}
+
+.galeria-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
