@@ -62,6 +62,10 @@ ul {
 
 body {
   background-image: url(./assets/edubarberback_hero.png);
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -191,13 +195,13 @@ li p {
 }
 
 #social-links {
-  padding-top: 100;
+  padding-top: 20px;
   color: white;
   gap: 6px;
   font-size: 24px;
-  margin-left: -250px;
   display: flex;
   align-items: center;
+  justify-content: center;
   line-height: 1;
 }
 
@@ -334,10 +338,9 @@ h2 span {
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
-  padding: 0;
-  flex: 1;
+  padding: 0 0 80px 0;
 }
 
 .title-3 {
@@ -359,19 +362,262 @@ h2 span {
 
 .galeria-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
-  gap: 8px;
-  padding: 0 40px;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  padding: 0 60px;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 1400px;
 }
 
 .galeria-grid img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* força o quadrado */
-  object-fit: cover; /* recorta sem distorcer */
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   display: block;
-  margin-top: 3rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.galeria-grid-4 {
+.galeria-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(201, 164, 16, 0.3);
+}
+
+.galeira-grid-4 {
   grid-template-columns: repeat(4, 1fr);
+  max-width: 1120px;
+}
+
+@media (max-width: 1024px) {
+  .lado-direito {
+    width: 70%;
+    transform: scale(0.85);
+  }
+
+  h1 {
+    font-size: 90px;
+  }
+
+  .newsection h2 {
+    font-size: 90px;
+    margin: 50px;
+  }
+
+  .title-3 {
+    font-size: 90px;
+  }
+
+  .card,
+  .card-2 {
+    width: 350px;
+  }
+
+  .card img,
+  .card-2 img {
+    width: 350px;
+    height: 520px;
+  }
+
+  .barber-pic img {
+    width: 350px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 30px;
+  }
+
+  .galeira-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-image: none;
+    background-color: #1a1a1a;
+  }
+
+  .lado-direito {
+    width: 100%;
+    margin-left: 0;
+    transform: none;
+    padding: 40px 20px 20px;
+    margin-top: 0;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  ul {
+    font-size: 20px;
+  }
+
+  .contact {
+    font-size: 18px;
+  }
+
+  .wpp {
+    font-size: 22px;
+    margin: 5px 0 0 0;
+    justify-content: center;
+  }
+
+  .botao-agendar {
+    font-size: 18px;
+    padding: 16px 40px;
+    max-width: 100%;
+  }
+
+  .container-map {
+    max-width: 100%;
+  }
+
+  .container-map iframe {
+    height: 250px;
+  }
+
+  #social-links {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .newsection h2 {
+    font-size: 60px;
+    margin: 40px 20px;
+  }
+
+  .subtitle-2 {
+    font-size: 16px;
+    top: -20px;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+
+  .team {
+    font-size: 35px;
+    top: 30px;
+  }
+
+  .barber-pic {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .barber-pic img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .card,
+  .card-2 {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .card img,
+  .card-2 img {
+    width: 100%;
+    height: 500px;
+  }
+
+  .card-2 p {
+    width: 100%;
+  }
+
+  .title-3 {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle-3 {
+    font-size: 22px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
+    gap: 10px;
+  }
+
+  .galeira-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 44px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  ul {
+    font-size: 16px;
+  }
+
+  .contact {
+    font-size: 15px;
+  }
+
+  .wpp {
+    font-size: 18px;
+  }
+
+  .botao-agendar {
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+
+  .container-map iframe {
+    height: 200px;
+  }
+
+  .newsection h2 {
+    font-size: 40px;
+    margin: 30px 15px;
+  }
+
+  .subtitle-2 {
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .team {
+    font-size: 28px;
+  }
+
+  .card img,
+  .card-2 img {
+    height: 400px;
+  }
+
+  .card p,
+  .card-2 p {
+    font-size: 18px;
+  }
+
+  .title-3 {
+    font-size: 40px;
+  }
+
+  .subtitle-3 {
+    font-size: 18px;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 15px;
+    gap: 8px;
+  }
 }
